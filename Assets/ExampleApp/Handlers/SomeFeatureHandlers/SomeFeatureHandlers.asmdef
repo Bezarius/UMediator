@@ -1,0 +1,18 @@
+{
+    "name": "SomeFeatureHandlers",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7ea4250b4aa44dc1af675d72a0db0d83",
+        "GUID:af9fbe40ad7c4824f9081b8ad447fa90",
+        "GUID:5f2d82b065073f54ca5d9f28e12c422a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
