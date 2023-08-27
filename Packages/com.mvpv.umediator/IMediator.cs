@@ -2,6 +2,12 @@ using System;
 
 namespace Mediator.Interfaces
 {
+    public interface ICommand{}
+    
+    public interface IQuery<TResult>
+    {
+    }
+    
 	public interface IMediatorResolver
     {
         object Resolve(Type contractType);
@@ -10,8 +16,8 @@ namespace Mediator.Interfaces
     
     public interface IMediator
     {
-        TResult Query<TQuery, TResult>(TQuery query);
-        void Send<TCommand>(TCommand command);
+        TResult Query<TQuery, TResult>(TQuery query) where TQuery : IQuery<TResult>;
+        void Send<TCommand>(TCommand command) where TCommand : ICommand;
         IObservable<TCommand> Subscribe<TCommand>();
     }
     

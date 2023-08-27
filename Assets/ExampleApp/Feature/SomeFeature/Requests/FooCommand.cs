@@ -1,6 +1,8 @@
-﻿namespace ExampleApp.Operations.Command
+﻿using Mediator.Interfaces;
+
+namespace ExampleApp.Operations.Command
 {
-    public class FooCommand
+    public class FooCommand : ICommand
     {
         public int Num { get; }
         public bool Flag { get; }
