@@ -10,9 +10,7 @@ namespace Editor.Mediator
             var settings = UMediatorGeneratorSettingsScriptableObject.Instance;
             
             var @namespace = settings.Settings.Namespace;
-            var inputRelativePath = AssetDatabase
-                .GetAssetPath(settings.Settings.SearchFolder)
-                .Replace("Assets/", "./");
+            var inputRelativePath = "./";
             var outputRelativePath = AssetDatabase
                 .GetAssetPath(settings.Settings.OutputFolder)
                 .Replace("Assets/", "./");
