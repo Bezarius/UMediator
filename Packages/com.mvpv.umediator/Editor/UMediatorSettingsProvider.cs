@@ -6,7 +6,7 @@ namespace Editor.Mediator
 {
     public class UMediatorSettingsProvider : SettingsProvider
     {
-        public const string PkgName = "UMediator.Generator";
+        public const string PkgName = "mediatorregistrations.generator";
 
         private SerializedObject _serializedObject;
         private SerializedProperty _settings;
