@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: UMediator
   m_EditorClassIdentifier: 
   Settings:
-    SearchFolder: {fileID: 0}
-    OutputFolder: {fileID: 0}
-    Namespace: 
+    OutputFolder: {fileID: 102900000, guid: afffeec04a1535246986d595362c117f, type: 3}
+    Namespace: ExampleApp.Operations

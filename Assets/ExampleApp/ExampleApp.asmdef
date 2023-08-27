@@ -2,7 +2,8 @@
     "name": "ExampleApp",
     "rootNamespace": "",
     "references": [
-        "UMediator"
+        "UMediator",
+        "VContainer"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
