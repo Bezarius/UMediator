@@ -53,12 +53,6 @@ namespace Editor.Mediator
                 _serializedObject.ApplyModifiedProperties();
             }
             
-            if (GUILayout.Button("Generate"))
-            {
-                UMediatorGenerator.Run();
-            }
-
-            /*
             if (!_generatorIsInstalled)
             {
                 if (GUILayout.Button("Install"))
@@ -79,7 +73,7 @@ namespace Editor.Mediator
                     NPMHelper.DeletePackage(PkgName);
                     _generatorIsInstalled = NPMHelper.CheckPackageExists(PkgName);
                 }
-            }*/
+            }
         }
     }
 }
