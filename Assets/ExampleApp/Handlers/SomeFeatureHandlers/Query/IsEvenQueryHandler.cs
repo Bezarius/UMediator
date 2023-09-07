@@ -1,10 +1,10 @@
 using ExampleApp.Feature.SomeFeature.Requests;
 using Mediator.Interfaces;
 
-public class IsEvenQueryHandler : IQueryHandler<IsEvenQuery, int>
+public class IsEvenQueryHandler : IQueryHandler<IsEvenQuery, bool>
 {
-    public int Handle(IsEvenQuery query)
+    public bool Handle(IsEvenQuery query)
     {
-        return query.Num % 2;
+        return query.Num % 2 == 0;
     }
 }

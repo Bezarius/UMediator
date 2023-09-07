@@ -20,15 +20,14 @@ namespace ExampleApp.Feature.SomeFeature
 
         public void Initialize()
         {
-            _disposable.Disposable =
-                _mediator
-                    .Subscribe<FooCommand>()
-                    .Subscribe(cmd =>
-                    {
-                        if(cmd.Flag)
-                            Debug.Log($"FooCommand: {cmd.Num}");
-                    });
-        
+            _disposable.Disposable = _mediator
+                .OnComplete<FooCommand>()
+                .Subscribe(cmd =>
+                {
+                    if (cmd.Flag)
+                        Debug.Log($"FooCommand: {cmd.Num}");
+                });
+
             var isEven = _mediator.Query<IsEvenQuery, bool>(new(42));
             if (isEven)
             {

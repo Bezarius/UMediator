@@ -28,7 +28,7 @@ namespace Mediator.Impl
             _eventBroker.Publish(command);
         }
 
-        public IObservable<TCommand> Subscribe<TCommand>()
+        public IObservable<TCommand> OnComplete<TCommand>() where TCommand : ICommand
         {
             return _eventBroker.Receive<TCommand>();
         }

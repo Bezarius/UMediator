@@ -2,36 +2,38 @@ using System;
 
 namespace Mediator.Interfaces
 {
-    public interface ICommand{}
-    
+    public interface ICommand
+    {
+    }
+
     public interface IQuery<TResult>
     {
     }
-    
-	public interface IMediatorResolver
+
+    public interface IMediatorResolver
     {
         object Resolve(Type contractType);
         void SetModuleResolver(object moduleResolver);
     }
-    
+
     public interface IMediator
     {
         TResult Query<TQuery, TResult>(TQuery query) where TQuery : IQuery<TResult>;
         void Send<TCommand>(TCommand command) where TCommand : ICommand;
-        IObservable<TCommand> Subscribe<TCommand>();
+        IObservable<TCommand> OnComplete<TCommand>() where TCommand : ICommand;
     }
-    
+
     // Interfaces for Command and Query Handlers
-    public interface ICommandHandler<TCommand>
+    public interface ICommandHandler<TCommand> where TCommand : ICommand
     {
         void Handle(TCommand command);
     }
 
-    public interface IQueryHandler<TQuery, TResult>
+    public interface IQueryHandler<TQuery, TResult> where TQuery : IQuery<TResult>
     {
         TResult Handle(TQuery query);
     }
-    
+
     public interface IEventPublisher
     {
         /// <summary>
